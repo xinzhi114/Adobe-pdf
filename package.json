@@ -1,0 +1,14 @@
+{
+  "name": "pdftools-node-sdk-samples",
+  "version": "1.2.0",
+  "description": "PDF Tools Node.js SDK sample",
+  "author": "Adobe",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:adobe/pdftools-node-sdk-samples.git"
+  },
+  "dependencies": {
+    "@adobe/documentservices-pdftools-node-sdk": "1.2.0"
+  }
+}
