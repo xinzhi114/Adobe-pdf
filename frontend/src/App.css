@@ -30,7 +30,13 @@
 .App-content {
   padding: 30px;
 }
-
+.sized-container-div {
+  margin: auto;
+  margin-top: 5%;
+  height: 476px;
+  width: 600px;
+  border: 1px solid #dadada;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

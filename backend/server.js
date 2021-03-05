@@ -1,10 +1,12 @@
 const express = require('express');
 var cors = require('cors');
 const bodyParser = require('body-parser');
+const multer = require('multer');
 const logger = require('morgan');
-
+const upload = multer({dest: 'resourse/'});
 const API_PORT = 3001;
 const app = express();
+
 app.use(cors());
 const router = express.Router();
 
@@ -14,13 +16,13 @@ const router = express.Router();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(logger('dev'));
-
+app.use('/resources', express.static(__dirname + '/resources'));
 // this is our get method
 // this method fetches all available data in our database
-router.get('/getData', (req, res) => {
-  Data.find((err, data) => {
-    return res.json({ success: true, data: {file: {}} });
-  });
+router.post('/upload', upload.any(), (req, res) => {
+  const des_file = "./resourse/" + req.files[0].originalname;
+
+  return res.json({ success: true, data: {filename: des_file } });
 });
 
 

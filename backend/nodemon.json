@@ -1,0 +1,16 @@
+{
+  "restartable": "rs",
+  "verbose": true,
+  "watch": [
+    "config/",
+    "output/",
+    "tool/",
+    "server.js"
+  ],
+  "ignore": [
+    "test/*.spec.ts"
+  ],
+  "delay": "1000",
+  "exec": " node --inspect ./server.js",
+  "ext": "js ejs yml json"
+}
